@@ -1,0 +1,50 @@
+﻿<!--Razor Engin/Server -->
+
+<!--html-->
+<h1>Hello From View 1</h1>
+
+<!--css-->
+<style>
+    h1{
+        color:red
+    }
+</style> 
+
+<!--Js-->
+<script>
+    console.log("Hello");
+</script>
+
+<!-- C# -->
+<!--Firsy Method => Block Code-->
+<!--will be removed when rendaring-->
+@{
+    int x = 10;
+    int y = x + 10;
+
+}
+
+<!--Second Method => Inline Statment-->
+<h2>@x</h2>
+@y
+
+<!--Condition statment-->
+@if (x > y) 
+{
+
+    <h2>X ggreater than y</h2>
+}
+else // x = 10
+{
+    <h2>X = @x Less than y =@y</h2> // printed
+
+}
+
+
+<!--Looping Statment-->
+@for (int i = 0; i < 10; i++)
+{
+    <li>@i</li>
+}
+
+<!--end of Day 1 Part 2 -->

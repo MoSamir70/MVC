@@ -1,0 +1,21 @@
+﻿@model List<Student>  // strong
+
+<!--model = strong-->
+<!--Model = dynamic-->
+
+<table class="table table-bordered table-hover">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>
+                <img src="/Images/@item.ImageURL" style="width:80px" />         @* Loop on images *@
+              @*   <img src="/Images/m.png" style="width:80px" /> *@            @* static *@ 
+              @*          images path must start with / or ~/ *@
+            </td>
+        </tr>
+    }
+</table>
+
+
