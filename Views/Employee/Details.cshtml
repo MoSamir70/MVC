@@ -1,0 +1,36 @@
+﻿@model Employee
+
+@{
+    ViewData["Title"] = "ITI Details";
+}
+
+<h1>Details</h1>
+
+<h2 style="color:@ViewBag.Color">@Model.Name</h2>
+<h1>@ViewData["Msg"]</h1>
+<h2>@(int.Parse(ViewData["Temp"].ToString()) - 10)</h2>
+
+
+<!-- ViewBag -->
+<h2>@(ViewBag.Temp - 10)</h2>
+
+
+<!-- select = drop down list-->
+<!--(List<string>) = explicit Casting-->
+<select class="form form-control">
+    @foreach (var item in (List<string>)ViewData["brch"]) 
+    {
+        <option>@item</option>
+    }
+</select>
+
+
+
+
+<!-- ViewBag -->
+<select class="form form-control">
+    @foreach (var item in ViewBag.brch)
+    {
+        <option>@item</option>
+    }
+</select>

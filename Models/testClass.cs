@@ -13,7 +13,7 @@
             dynamic yy = "ahmed";
             dynamic obj = new Student();
 
-           
+
             yy = xx + obj;
             return x + y;
         }
@@ -24,5 +24,25 @@
             int b = 20;
             Add(a, b);
         }
+
+
+        ///------------ Day2 P2 -> View Bag Recap
+
+        int viewData;
+        public int ViewData
+        {
+            set { viewData = value; }
+            get { return viewData; }
+        }
+
+        public dynamic ViewBag
+        {
+            set { ViewData = value; }
+            get { return ViewData; }
+        }
+
+        //------------------------------- 
+
+
     }
 }
